@@ -16,23 +16,67 @@ $("#js--nav-icon").click(function () {
 
 /*Menu sticky*/
 
-var quizzSection = document.getElementsByClassName("quizz")[0];
-var navigation = document.getElementsByClassName("main-nav")[0];
-
-if (quizzSection) {
-  if (!navigation.classList.contains("main-nav")) {
-    navigation.className = "sticky-nav";
-  } else {
-    navigation.className = "main-nav";
+$("#quizz").waypoint(
+  function (direction) {
+    if (direction == "down") {
+      $("ul").addClass("sticky");
+      $("ul").removeClass("main-nav");
+    } else {
+      $("ul").addClass("main-nav");
+      $("ul").removeClass("sticky");
+    }
+  },
+  {
+    offset: "50px;",
   }
-}
+);
 
 /*Drag and Drop*/
 $(function () {
-  $("#draggable").draggable();
-  $("#droppable").droppable({
-    drop: function () {
-      alert("I am dropped");
+  $("#draggableFrance").draggable();
+  $(".France").droppable({
+    drop: function (event, ui) {
+      $(this).find("p").html("Dropped!");
+    },
+  });
+});
+$(function () {
+  $("#draggableDanemark").draggable();
+  $(".Danemark").droppable({
+    drop: function (event, ui) {
+      $(this).find("p").html("Dropped!");
+    },
+  });
+});
+$(function () {
+  $("#draggableUsa").draggable();
+  $(".Usa").droppable({
+    drop: function (event, ui) {
+      $(this).find("p").html("Dropped!");
+    },
+  });
+});
+$(function () {
+  $("#draggableIsrael").draggable();
+  $(".Israel").droppable({
+    drop: function (event, ui) {
+      $(this).find("p").html("Dropped!");
+    },
+  });
+});
+$(function () {
+  $("#draggableBresil").draggable();
+  $(".Bresil").droppable({
+    drop: function (event, ui) {
+      $(this).find("p").html("Dropped!");
+    },
+  });
+});
+$(function () {
+  $("#draggableMexico").draggable();
+  $(".Mexico").droppable({
+    drop: function (event, ui) {
+      $(this).find("p").html("Dropped!");
     },
   });
 });

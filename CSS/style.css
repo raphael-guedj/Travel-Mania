@@ -134,10 +134,8 @@ input[type="button"] {
   list-style: none;
   position: fixed;
   top: 5%;
-  left: 60%;
+  left: 75%;
   display: none;
-  background-color: rgba(245, 205, 121, 0.9);
-  box-shadow: 1px 1px 2px #dbdbdb;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -148,34 +146,32 @@ input[type="button"] {
 .main-nav li a:link,
 .main-nav li a:visited {
   display: block;
-  color: #555;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
   padding: 10px 12px;
   transition: border-bottom 0.2s;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  -webkit-transition: border-bottom 0.2s;
+  -moz-transition: border-bottom 0.2s;
+  -ms-transition: border-bottom 0.2s;
+  -o-transition: border-bottom 0.2s;
 }
 
-.sticky-nav li a:hover,
-.sticky-nav li a:active,
-.main-nav li a:hover,
-.main-nav li a:active {
-  border-bottom: 1px solid #555;
-}
-
-.sticky-nav li a:link,
-.sticky-nav li a:visited {
+.sticky li a:link,
+.sticky li a:visited {
   display: block;
   color: #555;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
-  padding: 8px 0;
+  padding: 10px 12px;
   transition: border-bottom 0.2s;
+  -webkit-transition: border-bottom 0.2s;
+  -moz-transition: border-bottom 0.2s;
+  -ms-transition: border-bottom 0.2s;
+  -o-transition: border-bottom 0.2s;
 }
 
 /*Quizz */
@@ -190,6 +186,7 @@ input[type="button"] {
   display: flex;
   align-items: flex-start;
   margin-top: 50px;
+  z-index: 9;
 }
 
 .align-flex {
@@ -207,6 +204,7 @@ img {
 .flex-country {
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
 }
 
 .box-1 {
@@ -227,7 +225,7 @@ img {
   top: 92%;
 }
 
-#droppable {
+.droppable {
   width: 220px;
   height: 220px;
   padding: 0.5em;
