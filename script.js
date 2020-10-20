@@ -32,51 +32,55 @@ $("#quizz").waypoint(
 );
 
 /*Drag and Drop*/
-$(function () {
+var quizz = () => {
   $("#draggableFrance").draggable();
   $(".France").droppable({
+    accept: "#draggableFrance",
     drop: function (event, ui) {
-      $(this).find("p").html("Dropped!");
+      $(this).addClass("success").find("p").html("YEAH!");
     },
   });
-});
-$(function () {
+
   $("#draggableDanemark").draggable();
   $(".Danemark").droppable({
+    accept: "#draggableDanemark",
     drop: function (event, ui) {
-      $(this).find("p").html("Dropped!");
+      $(this).addClass("success").find("p").html("YEAH!");
     },
   });
-});
-$(function () {
-  $("#draggableUsa").draggable();
-  $(".Usa").droppable({
-    drop: function (event, ui) {
-      $(this).find("p").html("Dropped!");
-    },
-  });
-});
-$(function () {
-  $("#draggableIsrael").draggable();
-  $(".Israel").droppable({
-    drop: function (event, ui) {
-      $(this).find("p").html("Dropped!");
-    },
-  });
-});
-$(function () {
-  $("#draggableBresil").draggable();
-  $(".Bresil").droppable({
-    drop: function (event, ui) {
-      $(this).find("p").html("Dropped!");
-    },
-  });
-});
-$(function () {
   $("#draggableMexico").draggable();
   $(".Mexico").droppable({
+    accept: "#draggableMexico",
     drop: function (event, ui) {
-      $(this).find("p").html("Dropped!");
+      $(this).addClass("success").find("p").html("YEAH!");
     },
   });
-});
+  $("#draggableIsrael").draggable();
+  $(".Israel").droppable({
+    accept: "#draggableIsrael",
+    drop: function (event, ui) {
+      $(this).addClass("success").find("p").html("YEAH!");
+    },
+  });
+  $("#draggableUsa").draggable();
+  $(".Usa").droppable({
+    accept: "#draggableUsa",
+    drop: function (event, ui) {
+      $(this).addClass("success").find("p").html("YEAH!");
+    },
+  });
+  $("#draggableBresil").draggable();
+  $(".Bresil").droppable({
+    accept: "#draggableBresil",
+    drop: function (event, ui) {
+      $(this).addClass("success").find("p").html("YEAH!");
+    },
+  });
+};
+
+quizz();
+
+//refresh
+function refreshPage() {
+  window.location.reload();
+}

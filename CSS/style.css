@@ -109,9 +109,9 @@ input[type="button"] {
 
 .btn:hover,
 .btn:active {
-  background-color: #dfb356;
+  background-color: #f0b840;
   cursor: pointer;
-  border: 1px solid #dfb356;
+  border: 1px solid #f0b840;
   color: #161a1d;
 }
 
@@ -182,10 +182,20 @@ input[type="button"] {
   position: relative;
 }
 
+.flex-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-quizz {
+  margin-top: 35px;
+  margin-left: 20px;
+}
+
 .flex-container {
   display: flex;
   align-items: flex-start;
-  margin-top: 50px;
+  margin-top: 70px;
   z-index: 9;
 }
 
@@ -210,19 +220,19 @@ img {
 .box-1 {
   position: absolute;
   right: 0%;
-  top: 7%;
+  top: 8%;
 }
 
 .box-2 {
   position: absolute;
   right: 0%;
-  top: 50%;
+  top: 45%;
 }
 
 .box-3 {
   position: absolute;
   right: 0%;
-  top: 92%;
+  top: 82%;
 }
 
 .droppable {
@@ -233,6 +243,24 @@ img {
   color: #dfb356;
   border: 1px solid #dfb356;
   margin: 6px;
+}
+
+.success {
+  background: #d38312; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a83279,
+    #d38312
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a83279,
+    #d38312
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 8px;
+  color: #3ae374;
 }
 
 /* Form */
@@ -276,4 +304,57 @@ input[type="checkbox"] {
 
 *:focus {
   outline: none;
+}
+
+/*Header Voyages pages*/
+
+.flex-nav {
+  width: 1500px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.flex-header {
+  display: flex;
+  flex-direction: column;
+  height: 110%;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 40% !important;
+  padding: 15px !important;
+  border-radius: 15px !important;
+  font-size: 18px !important;
+  font-style: italic;
+  -webkit-border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+  -ms-border-radius: 15px !important;
+  -o-border-radius: 15px !important;
+}
+
+.btn-search {
+  background-color: #dfb356;
+  color: #000 !important;
+  font-size: 20px;
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+/*Travel images*/
+
+.container-img {
+  margin-top: 55px;
+}
+
+.flex-img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.image-flex {
+  width: 30%;
+  height: 30%;
 }
