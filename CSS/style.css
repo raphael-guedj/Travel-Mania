@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   background-color: #fff;
   color: #555;
   font-family: "Lato", "Arial", sans-serif;
@@ -47,7 +46,7 @@ h2 {
 }
 
 h2:after {
-  /*Tiret orange sous le titre H2*/
+  /*Tiret sous le titre H2*/
   display: block;
   height: 2px;
   width: 150px;
@@ -176,25 +175,21 @@ input[type="button"] {
 
 /*Quizz */
 
+.flex-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.flex-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn-quizz {
-  margin-top: 35px;
-  margin-left: 20px;
-}
-
 .flex-container {
   display: flex;
-  align-items: flex-start;
   margin-top: 70px;
   z-index: 9;
 }
@@ -213,7 +208,6 @@ img {
 
 .flex-country {
   display: flex;
-  justify-content: flex-end;
   z-index: 1;
 }
 
@@ -279,10 +273,6 @@ label {
   width: 60%;
 }
 
-.btn-form {
-  margin-left: -140px;
-}
-
 input[type="text"],
 input[type="email"],
 select,
@@ -296,10 +286,6 @@ textarea {
 
 textarea {
   height: 100px;
-}
-
-input[type="checkbox"] {
-  margin: 10px 5px 10px 0;
 }
 
 *:focus {
@@ -323,7 +309,7 @@ input[type="checkbox"] {
   align-items: center;
 }
 
-.search-bar {
+#search-bar {
   width: 40% !important;
   padding: 15px !important;
   border-radius: 15px !important;

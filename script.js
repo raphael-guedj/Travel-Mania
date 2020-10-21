@@ -1,8 +1,8 @@
 /*Navigation mobile */
 
-$("#js--nav-icon").click(function () {
-  var nav = $("#js--main-nav");
-  var icon = $("#js--nav-icon i");
+$("#nav-icon").click(function () {
+  var nav = $("#main-nav");
+  var icon = $(".fas");
 
   nav.slideToggle(200);
   if (icon.hasClass("fa-bars")) {
@@ -84,3 +84,42 @@ quizz();
 function refreshPage() {
   window.location.reload();
 }
+
+//Search message
+
+$(".btn-search").click(function () {
+  var valMsg = $("#search-bar").val().toLowerCase();
+  $("h3").each(function () {
+    if (valMsg !== "" && valMsg !== $(this).text().toLowerCase()) {
+      $(this).parent().fadeOut();
+    } else {
+      $(this).parent().delay(1500).fadeIn();
+    }
+  });
+  $("#search-bar").val("");
+});
+
+// var searchBtn = document.querySelector(".btn-search");
+
+// var h3 = document.querySelectorAll("h3");
+
+// searchBtn.addEventListener("click", function () {
+//   var msgSearch = document.getElementById("search-bar").value;
+//   h3.forEach((each) => {
+//     if (msgSearch !== "" && msgSearch !== this.textContent) {
+//       console.log(each.textContent);
+//     } else {
+//       console.log("nop");
+//     }
+//   });
+// });
+
+//animation image
+$(".anim-jquery").waypoint(
+  function () {
+    $(".anim-jquery").addClass("animate__animated animate__backInUp");
+  },
+  {
+    offset: "100%",
+  }
+);

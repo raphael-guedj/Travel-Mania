@@ -27,14 +27,14 @@
   <body>
     <header>
       <nav>
-        <ul class="main-nav" id="js--main-nav">
+        <ul class="main-nav" id="main-nav">
           <li><a href="Latam.html">Amérique Latine</a></li>
           <li><a href="Usa.html">Etats Unis</a></li>
           <li><a href="Europe.html">Europe</a></li>
           <li><a href="index.html">Retour à l'accueil</a></li>
         </ul>
 
-        <a class="nav-icon" id="js--nav-icon"><i class="fas fa-bars"></i></a>
+        <a class="nav-icon" id="nav-icon"><i class="fas fa-bars"></i></a>
       </nav>
       <div class="header-text">
         <h1>Travel Mania.<br />Souvenirs de vacances (pre-Covid19).</h1>
@@ -47,12 +47,13 @@
     <section id="quizz">
       <div class="row">
         <h2>Une ville &mdash; un pays</h2>
-        <div class="row flex-btn">
-          <p>
-            Associe chaque ville à son pays ! Selectionne la ville avec ta
-            souris et déplace la jusqu'au pays associé. Attention aux erreurs 😏
-          </p>
-          <a href="#" class="btn btn-quizz" onclick="refreshPage()">Rejouer</a>
+
+        <p>
+          Associe chaque ville à son pays ! Selectionne la ville avec ta souris
+          et déplace la jusqu'au pays associé. Attention aux erreurs 😏
+        </p>
+        <div class="flex-btn">
+          <a href="#" class="btn" onclick="refreshPage()">Rejouer</a>
         </div>
       </div>
       <div class="row">
@@ -171,7 +172,7 @@
         </div>
         <div class="flex-container">
           <label>&nbsp;</label>
-          <input type="button" value="Envoyer" class="btn btn-form" />
+          <input type="button" value="Envoyer" class="btn" />
         </div>
       </div>
     </section>
